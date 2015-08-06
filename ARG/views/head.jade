@@ -1,0 +1,83 @@
+header#main-header
+      .container
+        .row
+          .col-xs-12.col-sm-12.col-md-12.col-lg-12
+            .btn-group.botones-superiores
+              button.btn.btn-default.btn-superior(onclick="location.href='inscribete.php'")
+                img(src='img/inscribete-icono.png', alt='')
+                | Inscr&iacute;bete
+              |                       
+              button.btn.btn-primary(data-toggle='modal', data-target='.modal-ingresar')
+                img#ingresa(src='img/ingresa_icon.png')
+                | Ingresa
+              #modal-ingresar.modal.fade.modal-ingresar(tabindex='-1', role='dialog', aria-labelledby='myLargeModalLabel', aria-hidden='true')
+                .modal-dialog.modal-lg
+                  .modal-content
+                    .modal-footer
+                      button#boton-cerrar-modal.btn.btn-default.pull-right(type='button', data-dismiss='modal') Cerrar
+                    |                                 
+                    .titulo-login
+                      span Ingresar a mi Cuenta
+                    |                                 
+                    .formulario-login
+                      form(action='inc/procesaformulario-login.php', method='POST')
+                        .row
+                          .col-md-4.text-center
+                            .etiqueta-formulario
+                              span Email
+                          |                                                   
+                          .col-md-8
+                            input#email-login(type='email', name='email', required='required')
+                        |                                             
+                        .row
+                          .col-md-4
+                            .etiqueta-formulario
+                              span Contrase&ntilde;a
+                          |                                                   
+                          .col-md-8.contrasena
+                            input#password-login(type='password', name='password', required='required')
+                            |                                                       
+                            a(href='#') Olvid&eacute; mi Contrase&ntilde;a
+                        |                                                  
+                        |                                             
+                        .row
+                          .col-md-12
+                            .btn-login
+                              input#boton-login(type='submit', value='Ingresar')
+                    |                                 
+                    .pie-modal
+                      span
+                        | &iquest;Todav&iacute;a no tienes cuenta? 
+                        a(href='inscribete.php') &iexcl;Inscr&iacute;bete!
+              // FIN COMPONENTE MODAL
+              button.btn.btn-default.btn-superior(onclick="location.href='carrito.php'")
+                img(src='img/carrito-icono.png', alt='')
+                | Carrito: Vacio
+      .container
+        .row
+          //
+            LOGO
+          .col-xs-12.col-sm-12.col-md-4.col-lg-4
+            #main-logo
+              a(href='index.php')
+                img(src='img/ranyela-logotipo.png', alt='logotipo')
+          //
+            MENU
+          .col-xs-12.col-sm-12.col-md-8.col-lg-8
+            nav
+              ul.menu-principal.pull-right
+                li
+                  a(href='index.php')
+                    span.glyphicon.glyphicon-home
+                |                           
+                li
+                  a(href='#') GARGANTILLAS
+                |                           
+                li
+                  a(href='#') PULSERAS
+                |                           
+                li
+                  a(href='#') ZARCILLOS
+                |                           
+                li
+                  a(href='contacto.php') CONTACTO
